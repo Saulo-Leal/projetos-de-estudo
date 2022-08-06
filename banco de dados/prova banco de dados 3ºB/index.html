@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic&display=swap" rel="stylesheet">
+    <!--GOOGLE FONTS-->
+    <!--ICONS-->
+    <script src="https://kit.fontawesome.com/b21197af3e.js" crossorigin="anonymous"></script>
+    <!--ICONS-->
+    <link rel="stylesheet" href="index.css">
+    <title>Cadastro Alunos</title>
+</head>
+
+<body>
+    <header>
+        <form action="funcoes.php" method="POST">
+            <div class="campo">
+
+                <h1>Cadastro Alunos</h1>
+
+                <input type="text" name="matricula" placeholder="Matricula Aluno">
+                <input type="text" name="nome" placeholder="Nome">
+                <input type="text" name="nomePai" placeholder="Nome do Pai">
+                <input type="text" name="nomeMae" placeholder="Nome da Mãe">
+                <input type="date" name="dataNasct" placeholder="Data de Nascimento">
+                <input type="text" name="numIrmao" placeholder="Numero de irmãos">
+                <input type="text" name="sexo" placeholder="Sexo">
+
+                <div class="btns">
+                    <button class="btnNovo" name="novo" type="submit">Novo</button>
+                    <button class="btnAlterar" name="alterar" type="submit">Alterar</button>
+                    <button class="btnApagar" name="apagar" type="submit">Apagar</button>
+                    <button class="btnPesquisar" name="pesquisar" type="submit">Pesquisar</button>
+                </div>
+
+            </div>
+        </form>
+
+    </header>
+
+    <a id="icons" href="https://github.com/vilelaGa/Cadastro-de-Alunos" target="_blanck" title="GitHub"><i
+            style="color: black; font-size: 40px;" class="fa fa-github" aria-hidden="true"></i></a>
+
+</body>
+
+</html>

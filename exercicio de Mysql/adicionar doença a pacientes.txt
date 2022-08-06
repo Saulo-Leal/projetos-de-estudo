@@ -1,0 +1,2 @@
+ALTER TABLE pacientes
+ADD doença varchar(30) not null

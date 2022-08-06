@@ -1,0 +1,2 @@
+ALTER TABLE Funcionários
+ADD FOREIGN KEY(nroa)REFERENCES Ambulatórios

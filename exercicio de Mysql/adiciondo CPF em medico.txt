@@ -1,0 +1,2 @@
+ALTER TABLE medicos
+ADD CPF numeric(30) unique
