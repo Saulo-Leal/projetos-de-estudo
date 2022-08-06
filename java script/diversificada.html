@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>diversificada </title>
+<script type="text/javascript">
+
+
+//variaveis
+var temperatura = [];
+var logdetansiçao= [];
+var i = 0;
+
+//fahrenheit e clesius vise-versa
+var fahren = primeiroVtemp * 1.8 + 32;
+var celsius = (primeiroVtemp - 32) / 1.8;
+
+//kelvin e celsius vice-versa
+var kelvin = primeiroVtemp + 273.15;
+var kcelsuis = primeiroVtemp - 273.15;
+
+
+
+//começo, nota que o array começa no 0 e vai ater 6
+while(temperatura.length < 7)  {
+    
+    console.log(temperatura.length);
+    var tipodetransiçao = prompt("escreva o tipo de transiçao que deseja fazer, ecreva como: X para Y, por favor escreva os nomes certos");
+    var primeiroVtemp = prompt("escreva o primeiro valor que deseja ser convertido:");
+
+ //começo dos IF
+    if (tipodetransiçao == "celsius para fahrenheit"){
+       console.log(primeiroVtemp);
+       temperatura.push(fahren);
+       logdetansiçao.push(tipodetransiçao);
+      
+
+    }else if (tipodetransiçao == "fahrenheit para celsius") { 
+
+        console.log(primeiroVtemp);
+        temperatura.push(celsius);
+        logdetansiçao.push(tipodetransiçao);
+
+    
+    }else if(tipodetransiçao == "celsius para kelvin"){
+        console.log(primeiroVtemp);
+        temperatura.push(kelvin);
+        logdetansiçao.push(tipodetransiçao);
+       
+
+    }else if(tipodetransiçao == "kelvin para celsius"){
+        console.log(primeiroVtemp);
+        temperatura.push(kcelsuis);
+        logdetansiçao.push(tipodetransiçao);
+        
+
+    }else if(tipodetransiçao == "sair"){
+        break;
+
+    }else{
+        break;
+        document.write("conversao invalida");
+    }
+    
+};
+
+//tentativa de escrevar na tela
+for (var i= 0; i == temperatura.length; i++){
+  
+    document.write((i)+"º "+(temperatura[i])+ " em " + (logdetansiçao[i]));
+         
+}; 
+
+</script>
+
+</head>
+<body>
+
+
+
+</body>
+</html>

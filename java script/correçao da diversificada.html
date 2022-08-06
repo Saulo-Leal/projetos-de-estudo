@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script text="type/javascript">
+/*
+ DEFINIÇÃO DE VARIAVEIS PARA USO GERAL NO PROGRAMA
+*/
+    var i = 0;
+    var tipo = "";
+    var numero = 0;
+    var valorTemp = 0;
+    var resultado = 0;
+    var total = 0;
+    var count = 0;
+    var maior = 0;
+/*
+DEFINIÇÃO DE ARRAYS PARA COMPOSIÇÃO, ARMAZENAMENTO
+E APRESENTAÇÃO  DE RESULTADOS NO BROWSER
+*/    
+    listaDeResultados = [0, 0, 0, 0, 0, 0, 0];
+    listaDeTipos = [0, 0, 0, 0, 0, 0, 0];
+    listaDeValores = [0, 0, 0, 0, 0, 0, 0];
+	
+/*
+APRESENTAÇÃO DAS OPÇÕES PERMITIDAS PELO PROGRAMA
+*/	
+    document.write("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-<br>")
+    document.writeln("<b>TABELA DE CONVERSÃO:</b><br>");
+    document.writeln("1)Celsius -> Farenheit<br>");
+    document.writeln("2)Farenheit -> Celsius<br>");
+    document.writeln("3)Celsius -> Kelvin<br>");
+    document.writeln("4)Kelvin -> Celsius<br>");
+    document.write("5)ENCERRAR O PROGRAMA<br>");
+    document.write("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-<br>")
+
+/*
+REALIZAR A PERGUNTA E COLETA DE QUAL OPERAÇÃO O USUÁRIO
+DESEJA FAZER.
+*/
+for(i = 0; i <= 6; i++){
+    numero = prompt("Digite o numero correspondente à conversão que quer fazer:");
+	
+/*
+SE O USUÁRIO DIGITAR A OPÇÃO 5, INDICA QUE ELE QUER TERMINAR O PROGRAMA E APRESENTAR OS RESULTADOS. 
+*/	
+    if(numero == 5){
+        break;
+    }else{
+        valorTemp = prompt("Valor da conversão:");
+		
+/*
+NESTE PONTO, IREMOS TESTAR A OPÇÃO ESCOLHIDA PELO USUÁRIO DE FORMA QUE POSSAMOS EXECUTAR O CALCULO CORRETO DA CONVERSÃO DE TEMPERATURA.
+*/		
+        if(numero == 1){ //1)Celsius -> Farenheit
+            resultado = valorTemp * 1.8 + 32;
+            tipo = "C -> F";
+			
+			// GUARDA DENTRO ARRAY O CONJUNTO DE DADOS
+            listaDeTipos[i] = tipo.toString();
+            listaDeValores[i] = valorTemp.toString();
+            listaDeResultados[i] = resultado.toString();
+			
+        }else if (numero == 2) {//2)Farenheit -> Celsius
+            resultado = (valorTemp - 32) / 1.8;
+            tipo = "F -> C";
+            listaDeTipos[i] = tipo.toString();
+            listaDeValores[i] = valorTemp.toString();
+            listaDeResultados[i] = resultado.toString();
+            if(resultado > maior){
+                maior = resultado;
+            }
+        }else if (numero == 3){//3)Celsius -> Kelvin
+            resultado = valorTemp - (-273.15);
+            tipo = "C -> K";
+            listaDeTipos[i] = tipo.toString();
+            listaDeValores[i] = valorTemp.toString();
+            listaDeResultados[i] = resultado.toString();
+        }else if (numero = 4){ //4)Kelvin -> Celsius
+            resultado = valorTemp - 273.15;
+            tipo = "K -> C";
+            listaDeTipos[i] = tipo.toString();
+            listaDeValores[i] = valorTemp.toString();
+            listaDeResultados[i] = resultado.toString(); 
+        }
+    }
+}
+
+/*
+APRESENTAÇÃO DOS RESULTADOS DE CONVERSÃO SOLICITADOS PELO USUÁRIO
+*/
+for(i = 0; i <= 6; i++){
+    document.write("TIPO DE CONVERSÃO:<br> " + listaDeTipos[i] + "<br>");
+    document.write("VALOR SOLICITADO:<br> " + listaDeValores[i] + "<br>");
+    document.write("RESULTADO:<br>" + listaDeResultados[i] + "<br>");
+    document.write("-=-=-=-==-=-=-=-=-=-=-=-=-=-=-===-=<br>");
+    
+}
+document.write("MAIOR: " + maior);
+
+
+
+
+</script>
+
+<body>
+    
+</body>
+</html>

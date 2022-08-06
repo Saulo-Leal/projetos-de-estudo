@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <script type = "text/javascript">
+        var vac = [];
+        var vdc = [];
+        var conv2 = [];
+        var conv = [];
+        var mc = 0;
+        var q = "";
+        var q2 = "";
+        var q3 = "";
+		/*
+DEFINIÇÃO DE FORMULAS PARA USO NO PROGRAMA
+==========================================		
+        var cck = c + 273;
+        var ccf = c * 1.8 + 32;
+        var cfc = (f - 32)/1.8;
+        var cfk = (f - 32)/ 1.8 + 273;
+        var ckc = k - 273; 
+        var ckf = (k - 273) * 1.8 + 32
+		*/
+		
+        var c = 0;
+        var f = 0;
+        var k = 0;
+
+        for(var p = 0; p <= 6; p++){
+            var q = prompt("Escolha a conversao que voce quer que seja feita, caso queira finalizar digite FIM:(Escreva C para Celcius, F para Fahrenheit e K para Kelvin).");
+            if(q == "FIM"){
+                break;
+            }
+            // Escolha: C
+            if(q == "C"){
+                conv.push(q);
+                var q2 = prompt("Escolha se quer converter para Fahrenheit(F) ou Kelvin(K):");
+                if(q2 == "F"){
+                    conv2.push(q2);
+                    var q3 = prompt("Digite o valor que será convertido (C -> F)");
+                    var c = parseFloat(q3);
+                    var ccf = c * 1.8 + 32;
+                    alert("O valor, em Celcius, " + c + "ºC foi convertido, em Fahrenheit, para " + ccf + "ºF.");
+                    vac.push(c);
+                    vdc.push(ccf);
+                } else
+                    if(q2 == "K") { 
+                        conv2.push(q2);
+                        var q3 = prompt("Digite o valor que será convertido (C -> K)");
+                        var c = parseFloat(q3);
+                        var cck = c + 273;
+                        alert("O valor, em Celcius, " + c + "ºC foi convertido, em Kelvin, para " + cck + "K.");
+                        vac.push(c);
+                        vdc.push(cck);
+                    }
+                }
+            // Escolha: F
+            if(q == "F"){
+                conv.push(q);
+                var q2 = prompt("Escolha se quer converter para Celcius(C) ou Kelvin(K):");
+                if(q2 == "C"){
+                    conv2.push(q2);
+                    var q3 = prompt("Digite o valor que será convertido (F -> C)");
+                    var f = parseFloat(q3);
+                    var cfc = (f - 32)/1.8;
+                    alert("O valor, em Fahrenheit, " + f + "ºF foi convertido, em Celcius, para " + cfc + "ºC.");
+                    vac.push(f);
+                    vdc.push(cfc);
+                    if (cfc > mc){
+                        mc = cfc;
+                    }
+                } else
+                    if(q2 == "K") { 
+                        conv2.push(q2);
+                        var q3 = prompt("Digite o valor que será convertido (F -> K)");
+                        var f = parseFloat(q3);
+                        var cfk = (f - 32)/ 1.8 + 273;
+                        alert("O valor, em Fahrenheit, " + f + "ºC foi convertido, em Kelvin, para " + cfk + "K.");
+                        vac.push(f);
+                        vdc.push(cfk);
+                    }
+                }
+            //Escolha: K
+            if(q == "K"){
+                conv.push(q);
+                var q2 = prompt("Escolha se quer converter para Celcius(C) ou Fahrenheit(F):");
+                if(q2 == "C"){
+                    conv2.push(q2);
+                    var q3 = prompt("Digite o valor que será convertido (K -> C)");
+                    var k = parseFloat(q3);
+                    var ckc = k - 273;
+                    alert("O valor, em Kelvin, " + k + "K foi convertido, em Celcius, para " + ckc + "ºC.");
+                    vac.push(k);
+                    vdc.push(ckc);
+                    if (ckc > mc){
+                        mc = ckc;
+                    }
+                } else
+                    if(q2 == "F") { 
+                        conv2.push(q2);
+                        var q3 = prompt("Digite o valor que será convertido (K -> F)");
+                        var k = parseFloat(q3);
+                        var ckf = (k - 273) * 1.8 + 32;
+                        alert("O valor, em Kelvin, " + k + "K foi convertido, em Fahrenheit, para " + ckf + "ºF.");
+                        vac.push(k);
+                        vdc.push(ckf);
+                    }
+                }
+            }
+            
+            for(p = 0; p <= q3.length; p++){
+                document.write("O valor da escala " + conv[p] + "<br>" + " vai ser convertida para a escala " + conv2[p] + "<br>");
+                document.write("Valor dado: " + vac[p] + conv[p] + "<br>");
+                document.write("Valor convertido: " + vdc[p] + conv2[p] + "<br>" + "<br>");
+            } 
+            document.write("O maior valor da escala Celcius foi, de F para C ou K para C: " + mc + "ºC");
+            
+            
+    </script>
+
+
+  </head>
+  <body>
+    
+   
+    
+  </body>
+</html>

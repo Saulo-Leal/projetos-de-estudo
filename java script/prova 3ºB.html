@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script text="type/javascript">
+/*
+ DEFINIÇÃO DE VARIAVEIS PARA USO GERAL NO PROGRAMA
+*/
+    var i = 0;
+    var base = 0;
+    var altura= 0;
+    var tipo = "";
+    var lado =0;
+    var maior =0;
+    var menor =0;
+    var diagonalmaior=0;
+    var diagonalmenor=0;
+    var basemaior=0;
+    var basemenor=0;
+    var pi = 3.14;
+    var raio = 0;
+    var resultado = 0;
+    var total = 0;
+    var count = 0;
+    var maior = 0;
+/*
+DEFINIÇÃO DE ARRAYS PARA COMPOSIÇÃO, ARMAZENAMENTO
+E APRESENTAÇÃO  DE RESULTADOS NO BROWSER
+*/    
+    listaDeResultados = [];
+    listaDeTipos = [];
+   
+	
+/*
+APRESENTAÇÃO DAS OPÇÕES PERMITIDAS PELO PROGRAMA
+*/	
+    document.write("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-<br>")
+    document.writeln("<b>TABELA DE CONTAS:</b><br>");
+    document.writeln("1)RETANGULO");
+    document.writeln("2)QUADRADO");
+    document.writeln("3)LOSANGO");
+    document.writeln("4)TRAPEZIO");
+    document.write("5)PARALELOGRAMO");
+    document.write("6)TRIANGULO");
+    document.write("7)CIRCULO");
+    document.write("8)PARA SAIR");
+  
+
+/*
+REALIZAR A PERGUNTA E COLETA DE QUAL OPERAÇÃO O USUÁRIO
+DESEJA FAZER.
+*/
+for(i = 0; i <= 10; i++){
+    numero = prompt("1)RETANGULO, 2)QUADRADO,3)LOSANGO, 4)TRAPEZIO, 5)PARALELOGRAMO, 6)TRIANGULO, 7)CIRCULO, 8)PARA SAIR. Entao, digite oque vc deseja calcular");
+        
+        
+/*
+SE O USUÁRIO DIGITAR A OPÇÃO 8, INDICA QUE ELE QUER TERMINAR O PROGRAMA E APRESENTAR OS RESULTADOS. 
+*/	
+   
+
+        if(numero == 8){
+        break;
+        }else if(numero == 1){ 
+            base = prompt("digite o valor da base:");
+            altura = prompt("digite o valor da altura");
+            resultado = base * altura ;
+            tipo = "retangulo";
+			
+			// GUARDA DENTRO ARRAY O CONJUNTO DE DADOS
+           
+            listaDeTipos.push(tipo);
+            listaDeResultados.push(resultado);			
+        } else if (numero == 2) {
+            lado = prompt("dijite o valor do lado:");
+            resultado = lado * lado ;
+            tipo="quadrado";
+
+            if(resultado > maior){
+                maior = resultado;
+            }else if (resultado < maior){
+               menor = resultado
+            }
+            
+            listaDeTipos.push(tipo);
+            listaDeResultados.push(resultado);
+
+        } else if (numero == 3){
+            diagonalmaior= prompt("digite o valor da diagonal maior:");
+            diagonalmenor= prompt("digite o valor da diagonal menor:");
+            resultado =(diagonalmaior * diagonalmenor)/2 ;
+          
+            listaDeTipos.push(tipo);
+            listaDeResultados.push(resultado);
+
+        } else if (numero == 4){ 
+            basemaior=prompt("digite o valor da base maior:");
+            basemenor=prompt("digite o valor da base menor:");
+            altura=prompt("digite o valor da altura:");
+            resultado = [(basemaior+ basemenor)*altura]/2 ;
+            tipo="trapezio";
+
+            
+            listaDeTipos.push(tipo);
+            listaDeResultados.push(resultado);
+
+        } else if (numero == 5){
+            base = prompt("digite o valor da base:");
+            altura = prompt("digite o valor da altura");
+            resultado = base * altura ;
+            tipo = "paralelogramo";
+			
+			
+            listaDeTipos.push(tipo);
+            listaDeResultados.push(resultado);
+        
+        } else if (numero == 6){
+            base = prompt("digite o valor da base:");
+            altura = prompt("digite o valor da altura");
+            resultado = (base * altura)/2 ;
+            tipo = "triangulo";
+			
+			
+            listaDeTipos.push(tipo);
+            listaDeResultados.push(resultado);
+
+        } else if (numero == 7){
+            raio=prompt("digite o valor do raio:");
+            resultado = (raio * raio) * pi;
+            tipo = "circulo";
+
+            listaDeTipos.push(tipo);
+            listaDeResultados.push(resultado);
+
+
+        }
+    }
+	
+
+		
+  
+
+/*
+APRESENTAÇÃO DOS RESULTADOS DE CONVERSÃO SOLICITADOS PELO USUÁRIO
+*/
+for(i = 0; i <= listaDeResultados.length; i++){
+    document.write("<br> TIPO DE CONVERSÃO:<br> " + listaDeTipos[i] + "<br>");
+    document.write("<br> RESULTADO:<br>" + listaDeResultados[i] + "<br>");
+    document.write("-=-=-=-==-=-=-=-=-=-=-=-=-=-=-===-=<br>");
+       
+    
+}
+document.write("De todos os quadrados feitos, o menor é:" + menor + "<br>"); 
+document.write("De todos os quadrados feitos, o maior é:" + maior + "<br>"); 
+
+
+
+
+
+</script>
+
+<body>
+    
+</body>
+</html>

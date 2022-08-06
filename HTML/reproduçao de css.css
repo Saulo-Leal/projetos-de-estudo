@@ -1,0 +1,38 @@
+#preto{
+    position: relative;
+    width: auto;
+    height: 75px;
+    background-color: black;
+    
+}
+p{
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+#zapzap {
+    position : fixed;
+        top: 200px;
+        left: 25px;
+    
+    }
+        #zapzap img{
+    height: 64px;
+    width: 64px;
+    }
+
+#paradinha{
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+}
+#pdecima{
+    position : fixed;
+       top: 15px;
+       left: 150px;
+
+}
+#pdecima img{
+    height: 64px;
+    width: 64px;
+    }

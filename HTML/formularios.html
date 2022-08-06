@@ -1,0 +1,39 @@
+<html>
+ <head>
+     <meta charset="UTF-8"/>
+     <title>formularios</title>
+</head>
+ <body>
+     <h2><b>HTML formulários</b></h2>
+
+     <form action="/publicar-comentario.php" method="POST">
+        Login:<br>
+        <input type="text" name="nome-personagem" ></input><br>
+        
+        Senha:<br>
+        <input type="password" name="senha" value="mouse" ></input><br>
+
+        <input type="radio" name="sexo" value="masculino" checked></input> Masculino<br>
+        <input type="radio" name="sexo" value="feminino"></input> Feminino<br>
+        <input type="radio" name="sexo" value="outro"></input> Outro<br>
+
+        <p>
+            marca de carro
+            <select name="marca">
+                <option value="Volvo">Volvo</option>
+                <option value="Camaro">Camaro</option>
+                <option value="Mercedes">Mercedes</option>
+                <option value="Audi">Audi</option>
+            </select>
+        </p>
+        <p>
+            <input type="submit" value="Enviar"> 
+        </p>     
+
+     </form>
+    
+     
+
+         
+ </body>
+ </html>

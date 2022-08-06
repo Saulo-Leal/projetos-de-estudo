@@ -1,0 +1,47 @@
+<html>
+        <head>
+            <meta charset="UTF-8"/>
+            <title>exercicio de formulario(Jogo)</title>
+            
+            
+        </head>
+        <body>
+            <h2><b><center>Formulário da Partida - Distrito 6 </center> </b></h2>
+            <h5><B><center>Sobre a Partida</center></B></h5>
+       
+            <form action="/steam/form/player.php" md="POST">
+                 Número de jogadores  <input type="text" border-width:80 name ="numero de jogadores"> Duração da Explicação  <input type="text" name ="Duração da Explicação"> <br>
+               
+                  Você jogou essa partida? <input type="radio" name="Partida" value="Sim" checked> Sim</input> <input type="radio" name="Partida" value="Não" > Não </input> Duração da Partida <input type="text" name ="Duração da Partida"> <br>
+               
+               
+                 Data: <input type="text" name ="Data"> Versão (tem no manual) <input type="text" name ="Versão"> <br>
+               
+                 Parte mais difícil dos jogadores entenderem <input type="text" name ="Parte mais Difícil"> <br>
+               
+                 <center><b><h3>avaliaçao do manual</h3></b></center>
+              
+                 <center><h6>Marque apenas uma opção por questão. Sendo 1 péssimo e 5 execelente </h6></center>
+              
+                 Para aprender <select name="aprender"> <option value="1">1</option> <option value="2">2</option> <option value="3">3</option> <option value="4">4</option> <option value="5">5</option> </select> para consultar <select name="consultar"> <option value="1">1</option> <option value="2">2</option> <option value="3">3</option> <option value="4">4</option> <option value="5">5</option> </select> <br>
+                              
+                  Melhor Parte: <input type="text" name ="melhor parte"><br>
+              
+                   Pior parte: <input type="text" name ="pior parte"><br>
+              
+                  <center><b><h3>Sobre o processo  de playtest</h3></b></center>
+              
+                   Você gostou ?<input type="radio" name="Partida" value="Sim" checked> Sim</input> <input type="radio" name="Partida" value="Não" > Você faria novamente? <input type="radio" name="Partida2" value="Sim" checked> Sim</input> <input type="radio" name="Partida2" value="Não" > <br>
+              
+                  Melhor parte:  <input type="text" name ="Melhor parte(playtest)"><br>
+              
+                   Pior parte:  <input type="text" name ="pior parte(playtest)"><br>
+
+                 <p>
+                    <input type="submit" value="Enviar">
+                 </p>
+
+          </form>
+         
+        </body>
+        </html>
